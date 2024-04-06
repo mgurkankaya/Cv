@@ -1,0 +1,27 @@
+﻿@model Cv.Models.Entity.TblExperience
+@{
+    ViewBag.Title = "GetExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyimleri Güncelle</h2>
+
+<form class="form-group">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control mb-3" })
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
+
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+
+
+    <button class="btn btn-outline-info mt-3">Güncelle</button>
+</form>

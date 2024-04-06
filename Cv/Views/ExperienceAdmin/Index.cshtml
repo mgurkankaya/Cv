@@ -1,0 +1,35 @@
+﻿@using Cv.Models.Entity
+@model List<TblExperience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyimlerim</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Tarih</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Subtitle</td>
+                <td>@item.Date</td>
+                <td><a href="/ExperienceAdmin/DeleteExperience/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/ExperienceAdmin/GetExperience/@item.Id" class="btn btn-outline-w">Düzenle</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

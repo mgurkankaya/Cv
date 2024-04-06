@@ -1,0 +1,306 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MGKCV | Admin Panel</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/AdminLTE/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/AdminLTE/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Ara" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/AdminLTE/index3.html" class="brand-link">
+                <img src="/AdminLTE/dist/img/AdminLTELogo.png"
+                     alt="AdminLTE Logo"
+                     class="brand-image img-circle elevation-3"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">MGK-CV</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="https://avatars.githubusercontent.com/u/159084994?v=4" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/Default/Index" target="_blank" class="nav-link">
+                                <i class="fas fa-hand-pointer	 nav-icon"></i>
+                                <p>Siteyi Gör</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-address-card"></i>
+                                <p>
+                                    Hakkımda
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index.html" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index2.html" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-graduation-cap"></i>
+                                <p>
+                                    Eğitimlerim
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index.html" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index2.html" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-history"></i>
+                                <p>
+                                    Deneyimlerim
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/ExperienceAdmin/Index" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/ExperienceAdmin/AddExperience" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-thumbs-up"></i>
+                                <p>
+                                    İlgi Alanlarım
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index.html" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index2.html" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-laptop-code "></i>
+                                <p>
+                                    Yeteneklerim
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index.html" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index2.html" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-award"></i>
+                                <p>
+                                    Sertifikalarım
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index.html" class="nav-link">
+                                        <i class="fa fa-list nav-icon"></i>
+                                        <p>Tüm Yazılar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/AdminLTE/index2.html" class="nav-link">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        <p>Yeni Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/AdminLTE/index2.html" class="nav-link">
+                                <i class="fas fa-envelope-open	 nav-icon"></i>
+                                <p>İletişim</p>
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+
+
+
+
+
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-md mt-3">
+                        @RenderBody()
+                    </div>
+
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+
+       
+        <!-- Content Wrapper. Contains page content -->
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.0.4
+            </div>
+            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+            reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="/AdminLTE/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/AdminLTE/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="/AdminLTE/dist/js/demo.js"></script>
+</body>
+</html>
+
