@@ -1,0 +1,16 @@
+﻿@model Cv.Models.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h3 class="mb-5">Sosyal Medya Güncelle</h3>
+        <form method="post" class="form-group">
+            @Html.TextBoxFor(x => x.SMName,  new {@class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Link,  new {@class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Class,  new {@class = "form-control mb-3"})
+            <button class="btn btn-outline-info mt-3">Güncelle</button>
+        </form>
+    </div>
+</section>

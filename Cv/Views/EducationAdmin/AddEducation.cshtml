@@ -1,0 +1,21 @@
+﻿@model Cv.Models.Entity.TblEducation
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Eğitim Ekle</h2>
+        <form method="post" class="form-group">
+            @Html.TextBoxFor(x => x.Title, new { placeholder = "Eğitim Başlığı", @class = "form-control mb-3" })
+            @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(x => x.Subtitle, new { placeholder = "Açıklama 1", @class = "form-control mb-3" })
+            @Html.ValidationMessageFor(x => x.Subtitle, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(x => x.Subtitle2, new { placeholder = "Açıklama 2", @class = "form-control mb-3" })
+            @Html.ValidationMessageFor(x => x.Subtitle2, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(x => x.Date, new { placeholder = "Tarih", @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Date, "", new { @class = "text-danger" })
+            <button class="btn btn-outline-info mt-3">Ekle</button>
+        </form>
+    </div>
+</section>

@@ -43,5 +43,17 @@ namespace Cv.Controllers
             TblExperience tblExperience = repo.Find(x=>x.Id == id); 
             return View(tblExperience);
         }
+
+        [HttpPost]
+        public ActionResult GetExperience(TblExperience tblExperienceP)
+        {
+            TblExperience value = repo.Find(x => x.Id == tblExperienceP.Id);
+            value.Title = tblExperienceP.Title;
+            value.Subtitle = tblExperienceP.Subtitle;
+            value.Date = tblExperienceP.Date;
+            value.Description = tblExperienceP.Description;
+            repo.Update(tblExperienceP);
+            return RedirectToAction("Index");
+        }
     }
 }

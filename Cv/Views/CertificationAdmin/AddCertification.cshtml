@@ -1,0 +1,18 @@
+﻿@model Cv.Models.Entity.TblCertification
+@{
+    ViewBag.Title = "AddCertification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Sertifika Ekle</h2>
+        <form method="post" class="form-group">
+
+            @Html.TextBoxFor(x => x.Certifications, new { placeholder = "Sertifika gir...", @class = "form-control mb-3" })
+            @Html.TextBoxFor(x => x.Date, new { placeholder = "Sertifika Tarihi Gir...", @class = "form-control mb-3" })
+            <button class="btn btn-outline-info mt-3">Sertifika Ekle</button>
+        </form>
+    </div>
+</section>

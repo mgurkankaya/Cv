@@ -1,0 +1,41 @@
+﻿@using Cv.Models.Entity
+@model List<TblContact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Mesajlar - İletişim</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>SN</th>
+            <th>Ad Soyad</th>
+            <th>Mail</th>
+            <th>Konu</th>
+            <th>Mesaj</th>
+            <th>İşlemler</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Mail</td>
+                <td>@item.Subject</td>
+                <td>@item.Message</td>
+                <td>
+                    <a href="/ContactAdmin/DeleteContact/@item.Id"><i class="fas fa-trash text-red m-1"></i></a>
+                    <a href="/ContactAdmin/UpdateContact/@item.Id"><i class="fas fa-edit text-gray-dark m-1"></i></a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

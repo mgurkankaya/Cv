@@ -1,0 +1,20 @@
+﻿@model Cv.Models.Entity.TblContact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3 class="mt-3">Mesajları Güncelle</h3>
+<form method="post" class="form-group">
+    @Html.Label("İsim Soyisim")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+
+    @Html.Label("Mesaj")
+    @Html.TextBoxFor(x => x.Message, new { @class = "form-control" })
+    <button class="btn btn-outline-info mt-3">Güncelle</button>
+</form>

@@ -1,0 +1,14 @@
+﻿@model Cv.Models.Entity.TblCertification
+@{
+    ViewBag.Title = "UpdateCertification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3 class="mt-3">Sertifika Güncelle</h3>
+<form method="post" class="form-group">
+    @Html.Label("Sertifika Adı")
+    @Html.TextBoxFor(x => x.Certifications, new { @class = "form-control" })
+
+    @Html.Label("Alınma Tarihi")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <button class="btn btn-outline-success mt-3">Güncelle</button>
+</form>

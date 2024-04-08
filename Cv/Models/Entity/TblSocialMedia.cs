@@ -12,11 +12,12 @@ namespace Cv.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TblCertification
+    public partial class TblSocialMedia
     {
-        public int Id { get; set; }
-        public string Certifications { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
+        public int ID { get; set; }
+        public string SMName { get; set; }
+        public string Link { get; set; }
+        public string Class { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

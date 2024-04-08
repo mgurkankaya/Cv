@@ -8,7 +8,7 @@ using Cv.Models.Entity;
 
 namespace Cv.Controllers
 {
-    
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         DbCvEntities db = new DbCvEntities();
@@ -28,6 +28,12 @@ namespace Cv.Controllers
         {
             var experience = db.TblExperience.ToList();
             return PartialView(experience);
+        }
+
+        public PartialViewResult SocialMedias()
+        {
+            var socialMedia = db.TblSocialMedia.Where(x=>x.Status==true).ToList();
+            return PartialView(socialMedia);
         }
 
         public PartialViewResult Educations()

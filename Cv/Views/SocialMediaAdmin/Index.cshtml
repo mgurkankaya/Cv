@@ -1,0 +1,76 @@
+﻿@using Cv.Models.Entity
+@model List<TblSocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sosyal Medya Ayarları</h3>
+                    </div>
+
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Sosyal Medya Adı</th>
+                                <th>Link</th>
+                                <th>Fa-Class</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.SMName</td>
+                                    <td>@item.Link</td>
+                                    <td>@item.Class</td>
+                                    <td>@item.Status</td>
+                                    <td>
+                                        <a href="/SocialMediaAdmin/DeleteSocialMedia/@item.ID"><i class="fas fa-unlink text-red m-1"></i></a>
+                                        <a href="/SocialMediaAdmin/UpdateSocialMedia/@item.ID"><i class="fas fa-edit text-gray-dark m-1"></i></a>
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal1"><i class="fas fa-plus text-white"></i></button>
+
+</section>
+
+<div class="modal fade" id="Modal1"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sosyal Medya</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/SocialMediaAdmin/AddSocialMedia" method="post">
+                <div class="modal-body">
+                    <input type="text" name="SMName" class="form-control" placeholder="Sosyal Medya Adı" />
+                    <input type="text" name="Link" class="form-control" placeholder="https://orneksosyalmedya.com" />
+                    <input type="text" name="Class" class="form-control" placeholder="fa fa-mgk" />
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-primary">Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@model Cv.Models.Entity.TblSkill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Yetenek Ekle</h2>
+        <form method="post" class="form-group">
+            
+            @Html.TextBoxFor(x => x.Skill, new { placeholder = "Yetenek gir...", @class = "form-control mb-3" })
+            @Html.TextBoxFor(x => x.Rate, new { placeholder = "0-100 arasında oran gir...", @class = "form-control" })
+
+        
+
+
+            <button class="btn btn-outline-info mt-3">Güncelle</button>
+        </form>
+    </div>
+</section>

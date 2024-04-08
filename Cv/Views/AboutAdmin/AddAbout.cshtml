@@ -1,0 +1,21 @@
+﻿@model Cv.Models.Entity.TblAbout
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Hakkımda Bilgisi Ekle</h2>
+        <form method="post" class="form-group">
+            @Html.TextBoxFor(x => x.Name, new { placeholder = "Adınız...", @class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Surname, new { placeholder = "Soyadınız...", @class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Adress, new { placeholder = "Adresiniz...", @class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Phone, new { placeholder = "Telefon numarası...", @class = "form-control mb-3"})
+            @Html.TextBoxFor(x => x.Mail, new { placeholder = "Mail adresi...", @class = "form-control mb-3"})
+            @Html.TextAreaFor(x => x.Mail, new { placeholder = "Hakkınızda kısa bilgi...", @class = "form-control mb-3",@rows = 5 })
+            @Html.TextBoxFor(x => x.Mail, new { placeholder = "Görsel...", @class = "form-control mb-3", @row="10"})
+            <button class="btn btn-outline-info mt-3">Ekle</button>
+        </form>
+    </div>
+</section>
+

@@ -27,13 +27,14 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <p>
-            <a class="adminLogin-icon adminLogin-icons" href="#" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i></a> 
+            <a class="adminLogin-icon adminLogin-icons" href="/Login/Index" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i></a> 
             
         </p>
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Clarence Taylor</span>
             @foreach (var item in Model)
             {
+                <span class="d-block d-lg-none">@item.Name</span>
+
 
 
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="@item.Photo" alt="@item.Name" /></span>

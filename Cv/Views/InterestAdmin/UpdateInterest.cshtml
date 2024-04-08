@@ -1,0 +1,16 @@
+﻿@model Cv.Models.Entity.TblInterest
+@{
+    ViewBag.Title = "UpdateInterest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h3 class="mb-5">İlgi Alanı Güncelle</h3>
+        <form method="post" class="form-group">
+            @Html.Label("İlgi Alanı")
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control", @rows = 10 })
+            
+            <button class="btn btn-outline-info mt-3">Güncelle</button>
+        </form>
+    </div>
+</section>
